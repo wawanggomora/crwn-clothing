@@ -13,14 +13,14 @@ class App extends React.Component {
 		super();
 
 		this.state = {
-			currentUser: null
+			currentUser: null,
 		};
 	}
 
 	unsubscribeFromAuth = null;
 
 	componentDidMount() {
-		this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+		this.unsubscribeFromAuth = auth.onAuthStateChanged((user) => {
 			this.setState({ currentUser: user });
 			console.log(user);
 		});
@@ -43,5 +43,7 @@ class App extends React.Component {
 		);
 	}
 }
+
+//test
 
 export default App;
